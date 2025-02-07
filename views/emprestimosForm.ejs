@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title><%=titulo%></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="text-align: center;">
+
+    <h1 class="card text-white bg-primary">
+        <div class="card-body">
+            <p class="card-text"><%=titulo%></p>
+            <h4 class="card-text">Preencha o formulário abaixo e clique no botão Confirmar para realizar o cadastro</h4>
+        </div>
+    </h1>
+
+    <br><a class="btn btn-secondary" href="/emprestimos">Voltar</a><br>
+    
+    <div class="container mt-4">
+        <form action="<%=acao%>" method="post">
+            <div class="form-group">
+                <label for="edtCodigo">Código</label>
+                <input value="<%=registro.empcodigo%>" style="text-align: center;" type="text" name="edtCodigo" id="edtCodigo" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label for="edtCodAluno">Cod.Aluno</label>
+                <input value="<%=registro.alucodigo%>" style="text-align: center;" type="text" name="edtCodAluno" id="edtCodAluno" class="form-control" placeholder="Inserir código do aluno" required>
+            </div>
+            <div class="form-group">
+                <label for="edtCodLivro">Cod.Livro</label>
+                <input value="<%=registro.livcodigo%>" style="text-align: center;" type="text" name="edtCodLivro" id="edtCodLivro" class="form-control" placeholder="Inserir código do livro" required>
+            </div>
+            <div class="form-group">
+                <label for="edtData">Data Atual</label>
+                <input value="<%=registro.empdata%>" style="text-align: center;" type="date" name="edtData" id="edtData" class="form-control" placeholder="Inserir data atual" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Confirmar</button>
+            <button type="reset" class="btn btn-warning">Limpar</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
